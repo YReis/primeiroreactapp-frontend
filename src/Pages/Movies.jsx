@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Lista from "../Components/Lista";
+import ListInput from "../Components/Input/ListInput";
+import { useNavigate } from "react-router-dom";
 export default function Home(props) {
   const [listOfMovies, setlist] = useState([
     {
@@ -10,11 +12,35 @@ export default function Home(props) {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1inCUpr9piU8NFA_SL-m8bQDossAgaCOvw&usqp=CAU",
     },
   ]);
+  const navigate = useNavigate();
   return (
     <div>
-      {" "}
+      <button
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        {" "}
+        Home
+      </button>{" "}
       Hello World! I'm at Movies
-      <Lista list={listOfMovies} />
+      <ListInput
+        addItem={(valor) => {
+          setlist([valor, ...listOfMovies]);
+        }}
+      />
+      <br />
+      <hr />
+      <Lista
+        deletar={(valorDoFilho) => {
+          setlist(
+            listOfMovies.filter((e, i) => {
+              return e.title !== valorDoFilho;
+            })
+          );
+        }}
+        list={listOfMovies}
+      />
     </div>
   );
 }
