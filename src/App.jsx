@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Books from "./Pages/Books";
 import Movies from "./Pages/Movies";
 import Home from "./Pages/Home";
+import Login from "./Pages/Login";
 import Matriz from "./Components/Matriz/Matriz";
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
               <Route path="/home" exact element={<Home />} />
               <Route path="/books" exact element={<Books />} />
               <Route path="/movies" exact element={<Movies />} />
+              <Route path="/login" exact element={<Login />} />
             </Routes>
           </BrowserRouter>
         </Matriz>

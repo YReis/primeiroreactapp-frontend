@@ -5,13 +5,13 @@ import Lista from "../Components/Lista";
 import ListInput from "../Components/Input/ListInput";
 export default function Books(props) {
   const [listOfBooks, setBooks] = useState([
-    {
+    /*     {
       title: "Game of Thrones",
       author: "George",
       review: "An amazing adventure! ",
       imgsrc:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU9wfzRPM8pWKcg22Mm0i5QC74l0L1Dr9qMw&usqp=CAU",
-    },
+    }, */
   ]);
   const navigate = useNavigate();
   return (
