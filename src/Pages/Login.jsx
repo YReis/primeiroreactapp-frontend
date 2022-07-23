@@ -1,7 +1,7 @@
 // React and NPM imports
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import variables from "../variables";
 import Axios from "axios";
 
 //Styling imports
@@ -41,9 +41,9 @@ export default function Login(props) {
       method: "POST",
       data: values,
       withCredentials: true,
-      url: "http://192.168.0.9:4000/login",
+      url: `${variables.backUrl}/login`,
     }).then((res) => {
-      alert(res.data);
+      res.data.erro ? alert(res.data.mensagem) : navigate("/home");
     });
   }
   return (

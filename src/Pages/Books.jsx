@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Lista from "../Components/Lista";
+import Lista from "../Components/Lista/Lista";
 import ListInput from "../Components/Input/ListInput";
 export default function Books(props) {
   const [listOfBooks, setBooks] = useState([

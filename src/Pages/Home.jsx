@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import ListaSimples from "../Components/ListaSimples";
+import ListaSimples from "../Components/Lista/ListaSimples";
 
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
